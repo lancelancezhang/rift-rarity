@@ -40,8 +40,7 @@
         "bronze": ["faker", "keria", "gumayusi", "guma"],
         "silver": ["oner", "zeus", "doran", "showmaker"],
         "gold": ["canyon", "bengi", "bang", "wolf", "ruler"],
-        "platinum": ["deft", "peanut", "scout", "canyon"],
-        "diamond": ["nuguri", "ghost", "beryl", "khan", "teddy"],
+        "platinum": ["deft", "peanut", "scout", "beryl"],
         "master": ["easyhoon", "duke", "blank", "impact", "piglet"],
         "challenger": ["toyz", "bebe", "shushei", "xpeke", "cyanide"]
       }
