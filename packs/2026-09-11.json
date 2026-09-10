@@ -1,70 +1,75 @@
 {
   "date": "2026-09-11",
-  "title": "Day 1 League pack",
+  "title": "Assassins, AP items, players",
+  "sourceNotes": [
+    "Slow / stun / shield categories used for champ validity checks on League wiki",
+    "Boots / item names checked against https://wiki.leagueoflegends.com/en-us/Boots",
+    "Esports winners: https://wiki.leagueoflegends.com/en-us/Universe:Esports/World_Champions"
+  ],
   "prompts": [
     {
-      "id": "adc",
-      "text": "an ADC champion",
+      "id": "assassin",
+      "text": "an assassin champion",
       "answers": {
-        "bronze": ["jinx", "ashe", "caitlyn"],
-        "silver": ["ezreal", "lucian", "miss fortune", "mf"],
-        "gold": ["vayne", "kaisa", "kai'sa", "jhin"],
-        "platinum": ["draven", "tristana", "twitch", "sivir"],
-        "diamond": ["aphelios", "xayah", "varus"],
-        "master": ["kalista", "nilah", "corki", "quinn"],
-        "challenger": ["samira", "zeri", "smolder", "kogmaw", "kog'maw", "senna"]
+        "bronze": ["zed", "akali", "katarina", "talon"],
+        "silver": ["kha'zix", "khazix", "rengar", "eve", "evelynn", "qiyana"],
+        "gold": ["pyke", "ekko", "fizz", "diana"],
+        "platinum": ["kayn", "naafiri", "shaco", "nocturne"],
+        "diamond": ["yone", "yasuo", "irelia", "sylas"],
+        "master": ["bel'veth", "belveth", "briar", "nocturne"],
+        "challenger": ["akshan", "nilah", "shaco"]
       }
     },
     {
-      "id": "yordle",
-      "text": "a yordle",
+      "id": "ap-item",
+      "text": "an AP item",
       "answers": {
-        "bronze": ["teemo", "lulu", "tristana"],
-        "silver": ["corki", "heimerdinger", "heimer"],
-        "gold": ["poppy", "veigar"],
-        "platinum": ["ziggs", "rumble"],
-        "diamond": ["kennen", "gnar"],
-        "master": ["kled", "fizz"],
-        "challenger": ["vex", "yuumi"]
+        "bronze": ["rabadon's deathcap", "deathcap", "rabadons", "lich bane", "zhonya's hourglass", "zhonyas"],
+        "silver": ["shadowflame", "void staff", "morellonomicon", "morello"],
+        "gold": ["ludens companion", "luden's companion", "ludens", "blackfire torch", "horizon focus"],
+        "platinum": ["cryptbloom", "cosmic drive", "banshee's veil", "banshees"],
+        "diamond": ["stormsurge", "malignance", "liandry's torment", "liandrys"],
+        "master": ["rod of ages", "roa", "archangel's staff", "archangels", "seraph's embrace"],
+        "challenger": ["bloodletter's curse", "bloodletters", "riftmaker", "hextech rocketbelt", "rocketbelt"]
       }
     },
     {
-      "id": "t1",
-      "text": "T1 players",
+      "id": "worlds-player",
+      "text": "a Worlds-winning player",
       "answers": {
-        "bronze": ["faker"],
-        "silver": ["zeus", "oner", "gumayusi", "guma", "keria"],
-        "gold": ["doran"],
-        "platinum": ["bang", "bengi", "wolf", "peanut"],
-        "diamond": ["blank", "duke", "easyhoon", "teddy", "clid"],
-        "master": ["cuzz", "khan", "effort", "impact", "piglet"],
-        "challenger": ["untara", "thal", "marin", "sky", "tom", "huni"]
+        "bronze": ["faker", "keria", "gumayusi", "guma"],
+        "silver": ["oner", "zeus", "doran", "showmaker"],
+        "gold": ["canyon", "bengi", "bang", "wolf", "ruler"],
+        "platinum": ["deft", "peanut", "scout", "beryl"],
+        "diamond": ["nuguri", "ghost", "khan", "teddy"],
+        "master": ["easyhoon", "duke", "blank", "impact", "piglet"],
+        "challenger": ["toyz", "bebe", "shushei", "xpeke", "cyanide"]
       }
     },
     {
-      "id": "ult",
-      "text": "a champion with a global ultimate",
+      "id": "immobilize",
+      "text": "a champion with a stun or root",
       "answers": {
-        "bronze": ["twisted fate", "twisted", "tf", "shen"],
-        "silver": ["nocturne", "gangplank", "gp"],
-        "gold": ["karthus", "pantheon"],
-        "platinum": ["ashe", "jinx"],
-        "diamond": ["draven"],
-        "master": ["ezreal", "senna"],
-        "challenger": ["galio", "soraka"]
+        "bronze": ["leona", "morgana", "lux", "amumu"],
+        "silver": ["nautilus", "thresh", "maokai", "annie"],
+        "gold": ["neeko", "zyra", "ashe", "jinx"],
+        "platinum": ["rell", "lissandra", "varus", "ryze"],
+        "diamond": ["milio", "seraphine", "hwei", "mel"],
+        "master": ["ambessa", "camille", "aphelios", "qiyana"],
+        "challenger": ["zaahen", "singed", "shaco", "rengar"]
       }
     },
     {
-      "id": "void",
-      "text": "a Void champion",
+      "id": "support-item",
+      "text": "a support item",
       "answers": {
-        "bronze": ["kaisa", "kai'sa", "khazix", "kha'zix"],
-        "silver": ["chogath", "cho'gath"],
-        "gold": ["reksai", "rek'sai", "rek"],
-        "platinum": ["velkoz", "vel'koz", "malzahar"],
-        "diamond": ["kassadin"],
-        "master": ["kogmaw", "kog'maw"],
-        "challenger": ["belveth", "bel'veth"]
+        "bronze": ["moonstone renewer", "moonstone", "echoes of helia", "helia"],
+        "silver": ["imperial mandate", "mandate", "shurelya's battlesong", "shurelya", "shurelyas"],
+        "gold": ["dream maker", "staff of flowing water", "ardent censer", "ardent"],
+        "platinum": ["mikael's blessing", "mikaels", "redemption", "locket of the iron solari", "locket"],
+        "diamond": ["knight's vow", "knights vow", "zeke's convergence", "zekes"],
+        "master": ["celestial opposition", "solstice sled", "bloodsong"],
+        "challenger": ["vigilant wardstone", "watchful wardstone", "wardstone", "trailblazer"]
       }
     }
   ]
