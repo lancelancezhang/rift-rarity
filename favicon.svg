@@ -1,7 +1,11 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="Rift Rarity">
   <rect width="32" height="32" rx="6" fill="#061828"/>
-  <circle cx="18" cy="12" r="7" fill="#163d4c" stroke="#c9a45c" stroke-width="1.5"/>
-  <circle cx="18" cy="12" r="3.5" fill="#0a2030"/>
-  <path d="M8 10v12M5 13h6M8 22c-3.5 0-5-2.5-5-2.5M8 22c3.5 0 5-2.5 5-2.5" fill="none" stroke="#c9a45c" stroke-width="1.5" stroke-linecap="round"/>
-  <circle cx="8" cy="10" r="1.4" fill="#c9a45c"/>
+  <g fill="none" stroke="#c9a45c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="16" cy="8" r="3.2"/>
+    <path d="M16 11v14"/>
+    <path d="M11 15h10"/>
+    <path d="M16 25c-6 0-9-5-9-5"/>
+    <path d="M16 25c6 0 9-5 9-5"/>
+  </g>
+  <circle cx="16" cy="8" r="1.3" fill="#c9a45c"/>
 </svg>
