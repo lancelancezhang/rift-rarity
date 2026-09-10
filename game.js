@@ -386,7 +386,7 @@ function renderCatalog() {
 
     const summary = document.createElement("summary");
     summary.innerHTML = `
-      <span class="cat-title">${i + 1}. Name one ${prompt.text}</span>
+      <span class="cat-title">${i + 1}. Name ${prompt.text}</span>
       <span class="cat-meta">${answers.length} answers</span>
     `;
     details.appendChild(summary);
