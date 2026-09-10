@@ -1,0 +1,71 @@
+{
+  "date": "default",
+  "title": "Fallback pack",
+  "prompts": [
+    {
+      "id": "adc",
+      "text": "an ADC champion",
+      "answers": {
+        "bronze": ["jinx", "ashe", "caitlyn"],
+        "silver": ["ezreal", "lucian", "miss fortune", "mf"],
+        "gold": ["vayne", "kaisa", "kai'sa", "jhin"],
+        "platinum": ["draven", "tristana", "twitch", "sivir"],
+        "diamond": ["aphelios", "xayah", "varus"],
+        "master": ["kalista", "nilah", "corki", "quinn"],
+        "challenger": ["samira", "zeri", "smolder", "kogmaw", "kog'maw", "senna"]
+      }
+    },
+    {
+      "id": "yordle",
+      "text": "a yordle",
+      "answers": {
+        "bronze": ["teemo", "lulu", "tristana"],
+        "silver": ["corki", "heimerdinger", "heimer"],
+        "gold": ["poppy", "veigar"],
+        "platinum": ["ziggs", "rumble"],
+        "diamond": ["kennen", "gnar"],
+        "master": ["kled", "fizz"],
+        "challenger": ["vex", "yuumi"]
+      }
+    },
+    {
+      "id": "t1",
+      "text": "T1 players",
+      "answers": {
+        "bronze": ["faker"],
+        "silver": ["zeus", "oner", "gumayusi", "guma", "keria"],
+        "gold": ["doran"],
+        "platinum": ["bang", "bengi", "wolf", "peanut"],
+        "diamond": ["blank", "duke", "easyhoon", "teddy", "clid"],
+        "master": ["cuzz", "khan", "effort", "impact", "piglet"],
+        "challenger": ["untara", "thal", "marin", "sky", "tom", "huni"]
+      }
+    },
+    {
+      "id": "ult",
+      "text": "a champion with a global ultimate",
+      "answers": {
+        "bronze": ["twisted fate", "twisted", "tf", "shen"],
+        "silver": ["nocturne", "gangplank", "gp"],
+        "gold": ["karthus", "pantheon"],
+        "platinum": ["ashe", "jinx"],
+        "diamond": ["draven"],
+        "master": ["ezreal", "senna"],
+        "challenger": ["galio", "soraka"]
+      }
+    },
+    {
+      "id": "void",
+      "text": "a Void champion",
+      "answers": {
+        "bronze": ["kaisa", "kai'sa", "khazix", "kha'zix"],
+        "silver": ["chogath", "cho'gath"],
+        "gold": ["reksai", "rek'sai", "rek"],
+        "platinum": ["velkoz", "vel'koz", "malzahar"],
+        "diamond": ["kassadin"],
+        "master": ["kogmaw", "kog'maw"],
+        "challenger": ["belveth", "bel'veth"]
+      }
+    }
+  ]
+}

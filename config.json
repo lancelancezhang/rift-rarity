@@ -1,0 +1,44 @@
+{
+  "shareUrl": "https://rift-rarity.vercel.app",
+  "roundSeconds": 25,
+  "previewSeconds": 3,
+  "metersPerPoint": 10,
+  "timezone": "local",
+  "tiers": {
+    "bronze": {
+      "label": "Bronze",
+      "points": 10,
+      "note": "A common pick. Barely leaves the surface."
+    },
+    "silver": {
+      "label": "Silver",
+      "points": 20,
+      "note": "Still a popular route, but a step past the obvious."
+    },
+    "gold": {
+      "label": "Gold",
+      "points": 35,
+      "note": "Solid middling depth. You had company."
+    },
+    "platinum": {
+      "label": "Platinum",
+      "points": 50,
+      "note": "Sharper than average. Fewer players go here."
+    },
+    "diamond": {
+      "label": "Diamond",
+      "points": 70,
+      "note": "Uncommon. A minority of players land here."
+    },
+    "master": {
+      "label": "Master",
+      "points": 85,
+      "note": "Genuinely obscure. Most players never think of this."
+    },
+    "challenger": {
+      "label": "Challenger",
+      "points": 100,
+      "note": "The rarest accepted depth. Almost nobody wrote this."
+    }
+  }
+}

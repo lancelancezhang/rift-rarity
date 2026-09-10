@@ -1,9 +1,11 @@
 /**
  * Rift Rarity - Krillion-style League dive MVP
- * Content loads from prompts.json. Edit that file to change Q&A / tiers.
+ * Shared settings: config.json
+ * Daily prompts: packs/YYYY-MM-DD.json (falls back to packs/default.json)
  */
 
-const DATA_URL = "prompts.json";
+const CONFIG_URL = "config.json";
+const PACKS_DIR = "packs";
 
 /** @type {Record<string, {label: string, points: number, note: string}>} */
 let TIERS = {};
@@ -12,9 +14,11 @@ let PROMPTS = [];
 let ROUND_SECONDS = 25;
 let PREVIEW_SECONDS = 3;
 let METERS_PER_POINT = 10;
-let SHARE_URL = "https://riftrarity.example/dive/demo";
+let SHARE_URL = "https://rift-rarity.vercel.app";
 let PROMPT_COUNT = 0;
 let MAX_METERS = 5000;
+let ACTIVE_PACK = "";
+
 
 const state = {
   index: 0,
@@ -537,9 +541,9 @@ function showLoadError(err) {
   $("btn-start").disabled = true;
   if (lede) {
     lede.innerHTML = `
-      Couldn’t load <code>prompts.json</code>.
-      Browsers block local JSON when you open the HTML file directly.
-      From this folder run:<br /><code>python3 -m http.server 8080</code>
+      Couldn’t load today’s pack.
+      Serve the folder over HTTP (not a raw file open), e.g.
+      <code>python3 -m http.server 8080</code>
       then open <code>http://localhost:8080</code>.
       <br /><br /><span style="opacity:.7">${String(err?.message || err)}</span>
     `;
@@ -547,22 +551,99 @@ function showLoadError(err) {
   console.error(err);
 }
 
+/** Local calendar date as YYYY-MM-DD */
+function todayKey(timezone = "local") {
+  if (timezone && timezone !== "local") {
+    try {
+      return new Intl.DateTimeFormat("en-CA", {
+        timeZone: timezone,
+        year: "numeric",
+        month: "2-digit",
+        day: "2-digit",
+      }).format(new Date());
+    } catch {
+      /* fall through */
+    }
+  }
+  const d = new Date();
+  const y = d.getFullYear();
+  const m = String(d.getMonth() + 1).padStart(2, "0");
+  const day = String(d.getDate()).padStart(2, "0");
+  return `${y}-${m}-${day}`;
+}
+
+async function fetchJson(url) {
+  const res = await fetch(url, { cache: "no-store" });
+  if (!res.ok) throw new Error(`HTTP ${res.status} loading ${url}`);
+  return res.json();
+}
+
+/**
+ * Accepts either:
+ *   { "jinx": "bronze", "ashe": "bronze" }           // flat (old)
+ *   { "bronze": ["jinx", "ashe"], "silver": [...] } // grouped (preferred)
+ * Order never matters for scoring.
+ */
+function normalizeAnswers(raw, tiers) {
+  if (!raw || typeof raw !== "object") return {};
+  const flat = {};
+  const tierIds = new Set(Object.keys(tiers || {}));
+
+  for (const [key, value] of Object.entries(raw)) {
+    if (Array.isArray(value)) {
+      // grouped by tier: "bronze": ["jinx", "ashe"]
+      if (!tierIds.has(key)) {
+        console.warn(`Unknown tier "${key}" in answers; skipping`);
+        continue;
+      }
+      value.forEach((name) => {
+        const n = normalize(String(name));
+        if (n) flat[n] = key;
+      });
+    } else if (typeof value === "string") {
+      // flat: "jinx": "bronze"
+      const n = normalize(key);
+      if (n) flat[n] = value;
+    }
+  }
+  return flat;
+}
+
+function normalizePrompts(prompts, tiers) {
+  return prompts.map((p) => ({
+    ...p,
+    answers: normalizeAnswers(p.answers, tiers),
+  }));
+}
+
 async function loadData() {
   $("btn-start").disabled = true;
-  const res = await fetch(DATA_URL, { cache: "no-store" });
-  if (!res.ok) throw new Error(`HTTP ${res.status} loading ${DATA_URL}`);
-  const data = await res.json();
 
-  if (!data.tiers || !Array.isArray(data.prompts) || data.prompts.length === 0) {
-    throw new Error("prompts.json needs tiers + a non-empty prompts array");
+  const config = await fetchJson(CONFIG_URL);
+  if (!config.tiers) throw new Error("config.json needs a tiers object");
+
+  const date = todayKey(config.timezone || "local");
+  let pack;
+  let packLabel = date;
+
+  try {
+    pack = await fetchJson(`${PACKS_DIR}/${date}.json`);
+  } catch {
+    pack = await fetchJson(`${PACKS_DIR}/default.json`);
+    packLabel = "default";
   }
 
-  TIERS = data.tiers;
-  PROMPTS = data.prompts;
-  ROUND_SECONDS = data.roundSeconds ?? 25;
-  PREVIEW_SECONDS = data.previewSeconds ?? 3;
-  METERS_PER_POINT = data.metersPerPoint ?? 10;
-  SHARE_URL = data.shareUrl ?? SHARE_URL;
+  if (!Array.isArray(pack.prompts) || pack.prompts.length === 0) {
+    throw new Error(`Pack ${packLabel} needs a non-empty prompts array`);
+  }
+
+  TIERS = config.tiers;
+  PROMPTS = normalizePrompts(pack.prompts, TIERS);
+  ROUND_SECONDS = config.roundSeconds ?? 25;
+  PREVIEW_SECONDS = config.previewSeconds ?? 3;
+  METERS_PER_POINT = config.metersPerPoint ?? 10;
+  SHARE_URL = config.shareUrl ?? SHARE_URL;
+  ACTIVE_PACK = pack.date || packLabel;
   applyPackMeta();
 }
 
