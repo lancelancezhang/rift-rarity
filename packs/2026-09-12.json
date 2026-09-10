@@ -1,0 +1,78 @@
+{
+  "date": "2026-09-12",
+  "title": "Slows, boots, Worlds",
+  "sourceNotes": [
+    "Slow champs: https://wiki.leagueoflegends.com/en-us/Category:Slow_champion",
+    "Root champs: https://wiki.leagueoflegends.com/en-us/Category:Root_champion",
+    "Shield champs: https://wiki.leagueoflegends.com/en-us/Category:Shield_champion",
+    "Boots: https://wiki.leagueoflegends.com/en-us/Boots",
+    "Worlds winners: https://wiki.leagueoflegends.com/en-us/Universe:Esports/World_Champions"
+  ],
+  "prompts": [
+    {
+      "id": "slow",
+      "text": "a champion with a slow",
+      "answers": {
+        "bronze": ["ashe", "nasus", "thresh", "nami"],
+        "silver": ["jinx", "lux", "leona", "ahri", "cassiopeia"],
+        "gold": ["maokai", "sejuani", "rumble", "anivia", "zyra"],
+        "platinum": ["lillia", "renata", "renata glasc", "ornn", "gnar"],
+        "diamond": ["ambessa", "aurora", "hwei", "naafiri", "mel"],
+        "master": ["yunara", "smolder", "briar", "nilah"],
+        "challenger": ["zaahen", "taliyah", "illaoi"]
+      }
+    },
+    {
+      "id": "boots",
+      "text": "a boots item",
+      "answers": {
+        "bronze": ["mercury's treads", "mercs", "sorcerer's shoes", "sorcs"],
+        "silver": ["plated steelcaps", "steelcaps", "tabis", "ionian boots of lucidity", "ionian boots"],
+        "gold": ["berserker's greaves", "berserkers greaves", "greaves", "boots of swiftness", "swifties"],
+        "platinum": ["gluttonous greaves", "boots"],
+        "diamond": ["slightly magical boots"],
+        "master": ["spellslinger's shoes", "crimson lucidity"],
+        "challenger": ["mobility boots", "mobis", "boots of mobility"]
+      }
+    },
+    {
+      "id": "worlds-winner",
+      "text": "a Worlds-winning organization",
+      "answers": {
+        "bronze": ["t1", "skt", "sk telecom t1"],
+        "silver": ["fnatic", "fnc", "drx"],
+        "gold": ["edg", "edward gaming", "damwon", "damwon gaming", "dwg"],
+        "platinum": ["dplus kia", "dk", "invictus gaming", "ig"],
+        "diamond": ["funplus phoenix", "fpx", "samsung galaxy", "ssg"],
+        "master": ["samsung white", "ssw"],
+        "challenger": ["taipei assassins", "tpa"]
+      }
+    },
+    {
+      "id": "root",
+      "text": "a champion with a root",
+      "answers": {
+        "bronze": ["morgana", "lux", "amumu"],
+        "silver": ["maokai", "jinx", "leona", "neeko"],
+        "gold": ["zyra", "varus", "ryze", "nautilus"],
+        "platinum": ["ivern", "swain", "seraphine", "xayah"],
+        "diamond": ["renata", "renata glasc", "hwei", "mel"],
+        "master": ["aphelios", "qiyana", "k'sante", "ksante"],
+        "challenger": ["singed", "shaco", "rengar"]
+      }
+    },
+    {
+      "id": "shield",
+      "text": "a champion that can shield",
+      "answers": {
+        "bronze": ["thresh", "janna", "lulu", "karma"],
+        "silver": ["lux", "morgana", "orianna", "shen"],
+        "gold": ["riven", "yasuo", "diana", "ekko"],
+        "platinum": ["ivern", "rakan", "seraphine", "milio"],
+        "diamond": ["k'sante", "ksante", "ambessa", "naafiri"],
+        "master": ["rell", "renata", "renata glasc", "nilah"],
+        "challenger": ["mel", "hwei", "akshan"]
+      }
+    }
+  ]
+}

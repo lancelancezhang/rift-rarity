@@ -1,0 +1,76 @@
+{
+  "date": "2026-09-13",
+  "title": "Stuns, AD items, LCK",
+  "sourceNotes": [
+    "Stun champs: https://wiki.leagueoflegends.com/en-us/Category:Stun_champion",
+    "Shield / tank-adjacent champs cross-checked on League wiki categories",
+    "Worlds / org history: https://wiki.leagueoflegends.com/en-us/Universe:Esports/World_Champions"
+  ],
+  "prompts": [
+    {
+      "id": "stun",
+      "text": "a champion with a stun",
+      "answers": {
+        "bronze": ["leona", "nautilus", "annie", "amumu"],
+        "silver": ["thresh", "blitzcrank", "pantheon", "alistar", "ashe"],
+        "gold": ["sejuani", "lissandra", "braum", "poppy"],
+        "platinum": ["rell", "neeko", "pyke", "sett", "taric"],
+        "diamond": ["milio", "seraphine", "renata", "renata glasc", "ambessa"],
+        "master": ["veigar", "zilean", "viktor", "xerath"],
+        "challenger": ["zaahen", "skarner", "yone", "camille"]
+      }
+    },
+    {
+      "id": "ad-item",
+      "text": "an AD item",
+      "answers": {
+        "bronze": ["infinity edge", "ie", "bloodthirster", "bt"],
+        "silver": ["the collector", "collector", "lord dominik's regards", "ldr", "mortal reminder"],
+        "gold": ["kraken slayer", "kraken", "guinsoo's rageblade", "rageblade", "phantom dancer", "pd"],
+        "platinum": ["essence reaver", "er", "navori flickerblade", "navori", "statikk shiv"],
+        "diamond": ["hubris", "opportunity", "voltaic cyclosword", "youmuu's ghostblade", "youmuus"],
+        "master": ["terminus", "experimental hexplate", "stridebreaker"],
+        "challenger": ["profane hydra", "axiom arc", "serylda's grudge", "seryldas"]
+      }
+    },
+    {
+      "id": "lck-org",
+      "text": "an LCK organization",
+      "answers": {
+        "bronze": ["t1", "gen.g", "geng", "hanwha life esports", "hle"],
+        "silver": ["dplus kia", "dk", "kt rolster", "kt", "drx"],
+        "gold": ["nongshim redforce", "ns redforce", "nongshim", "bnk fearx", "fearx"],
+        "platinum": ["ok brion", "brion", "okavings brion", "dn freecs", "freecs", "kwangdong freecs"],
+        "diamond": ["jin air green wings", "jawg", "samsung ozone", "samsung blue"],
+        "master": ["cj entus", "najin sword", "najin white shield", "sk telecom t1"],
+        "challenger": ["mvp ozone", "azubu blaze", "incredible miracle", "kt arrows"]
+      }
+    },
+    {
+      "id": "tank",
+      "text": "a tank champion",
+      "answers": {
+        "bronze": ["malphite", "ornn", "sion", "cho'gath", "chogath"],
+        "silver": ["leona", "nautilus", "maokai", "sejuani", "zac"],
+        "gold": ["ksante", "k'sante", "rell", "poppy", "rammus"],
+        "platinum": ["tahm kench", "tahm", "skarner", "udyr", "dr. mundo", "mundo"],
+        "diamond": ["shen", "galio", "braum", "alistar"],
+        "master": ["ambessa", "volibear", "nunu", "nunu & willump"],
+        "challenger": ["zaahen", "ivern", "taric"]
+      }
+    },
+    {
+      "id": "ally-heal",
+      "text": "a champion that can heal an ally",
+      "answers": {
+        "bronze": ["soraka", "nami", "yuumi", "sona"],
+        "silver": ["milio", "janna", "senna", "seraphine"],
+        "gold": ["taric", "karma", "lulu", "rakan"],
+        "platinum": ["ivern", "nilah", "kayle", "sivir"],
+        "diamond": ["renata", "renata glasc", "orianna", "annie"],
+        "master": ["zac", "bard", "sivir"],
+        "challenger": ["nilah", "ivern", "heimerdinger"]
+      }
+    }
+  ]
+}
