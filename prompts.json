@@ -1,0 +1,183 @@
+{
+  "shareUrl": "https://riftrarity.example/dive/demo",
+  "roundSeconds": 25,
+  "previewSeconds": 3,
+  "metersPerPoint": 10,
+  "tiers": {
+    "bronze": {
+      "label": "Bronze",
+      "points": 10,
+      "note": "The most common valid pick. Everyone lands here first."
+    },
+    "silver": {
+      "label": "Silver",
+      "points": 20,
+      "note": "Still a popular route, but a step past the obvious."
+    },
+    "gold": {
+      "label": "Gold",
+      "points": 35,
+      "note": "Solid middling depth. You had company."
+    },
+    "platinum": {
+      "label": "Platinum",
+      "points": 50,
+      "note": "Sharper than average. Fewer players go here."
+    },
+    "diamond": {
+      "label": "Diamond",
+      "points": 70,
+      "note": "Uncommon. A minority of players land here."
+    },
+    "master": {
+      "label": "Master",
+      "points": 85,
+      "note": "Genuinely obscure. Most players never think of this."
+    },
+    "challenger": {
+      "label": "Challenger",
+      "points": 100,
+      "note": "The rarest accepted tier. Almost nobody wrote this."
+    }
+  },
+  "prompts": [
+    {
+      "id": "adc",
+      "text": "an ADC champion",
+      "answers": {
+        "jinx": "bronze",
+        "ashe": "bronze",
+        "caitlyn": "bronze",
+        "ezreal": "silver",
+        "lucian": "silver",
+        "miss fortune": "silver",
+        "mf": "silver",
+        "vayne": "gold",
+        "kaisa": "gold",
+        "kai'sa": "gold",
+        "jhin": "gold",
+        "draven": "platinum",
+        "tristana": "platinum",
+        "twitch": "platinum",
+        "sivir": "platinum",
+        "aphelios": "diamond",
+        "xayah": "diamond",
+        "varus": "diamond",
+        "kalista": "master",
+        "nilah": "master",
+        "corki": "master",
+        "quinn": "master",
+        "samira": "challenger",
+        "zeri": "challenger",
+        "smolder": "challenger",
+        "kogmaw": "challenger",
+        "kog'maw": "challenger",
+        "senna": "challenger"
+      }
+    },
+    {
+      "id": "yordle",
+      "text": "a yordle",
+      "answers": {
+        "teemo": "bronze",
+        "lulu": "bronze",
+        "tristana": "bronze",
+        "corki": "silver",
+        "heimerdinger": "silver",
+        "heimer": "silver",
+        "poppy": "gold",
+        "veigar": "gold",
+        "ziggs": "platinum",
+        "rumble": "platinum",
+        "kennen": "diamond",
+        "gnar": "diamond",
+        "kled": "master",
+        "fizz": "master",
+        "vex": "challenger",
+        "yuumi": "challenger"
+      }
+    },
+    {
+      "id": "t1",
+      "text": "T1 players",
+      "answers": {
+        "faker": "bronze",
+        "zeus": "silver",
+        "oner": "silver",
+        "gumayusi": "silver",
+        "guma": "silver",
+        "keria": "silver",
+        "doran": "gold",
+        "kkoma": "gold",
+        "kko ma": "gold",
+        "kim jeong-gyun": "gold",
+        "bang": "platinum",
+        "bengi": "platinum",
+        "wolf": "platinum",
+        "peanut": "platinum",
+        "blank": "diamond",
+        "duke": "diamond",
+        "easyhoon": "diamond",
+        "teddy": "diamond",
+        "clid": "diamond",
+        "cuzz": "master",
+        "khan": "master",
+        "effort": "master",
+        "impact": "master",
+        "piglet": "master",
+        "untara": "challenger",
+        "thal": "challenger",
+        "lustboy": "challenger",
+        "marin": "challenger",
+        "sky": "challenger",
+        "tom": "challenger",
+        "huni": "challenger"
+      }
+    },
+    {
+      "id": "ult",
+      "text": "a champion with a global ultimate",
+      "answers": {
+        "twisted fate": "bronze",
+        "twisted": "bronze",
+        "tf": "bronze",
+        "shen": "bronze",
+        "nocturne": "silver",
+        "gangplank": "silver",
+        "gp": "silver",
+        "karthus": "gold",
+        "pantheon": "gold",
+        "ashe": "platinum",
+        "jinx": "platinum",
+        "draven": "diamond",
+        "ezreal": "master",
+        "senna": "master",
+        "galio": "challenger",
+        "soraka": "challenger",
+      }
+    },
+    {
+      "id": "void",
+      "text": "a Void champion",
+      "answers": {
+        "kaisa": "bronze",
+        "kai'sa": "bronze",
+        "khazix": "bronze",
+        "kha'zix": "bronze",
+        "chogath": "silver",
+        "cho'gath": "silver",
+        "reksai": "gold",
+        "rek'sai": "gold",
+        "rek": "gold",
+        "velkoz": "platinum",
+        "vel'koz": "platinum",
+        "malzahar": "platinum",
+        "kassadin": "diamond",
+        "kogmaw": "master",
+        "kog'maw": "master",
+        "belveth": "challenger",
+        "bel'veth": "challenger"
+      }
+    }
+  ]
+}

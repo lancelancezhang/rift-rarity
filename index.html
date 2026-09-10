@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rift Rarity - League Dive</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body data-zone="surface">
+  <div class="dive-world" aria-hidden="true">
+    <div class="ocean-column" id="ocean-column">
+      <div class="zone zone-surface"><span>Sunlight zone</span></div>
+      <div class="zone zone-twilight"><span>Twilight zone</span></div>
+      <div class="zone zone-midnight"><span>Midnight zone</span></div>
+      <div class="zone zone-abyss"><span>Abyssal zone</span></div>
+      <div class="zone zone-trench"><span>Trench floor</span></div>
+    </div>
+    <div class="caustics"></div>
+    <div class="bubbles" id="bubbles"></div>
+    <div class="diver" id="diver">
+      <div class="diver-body"></div>
+      <div class="diver-trail"></div>
+    </div>
+    <div class="depth-rail">
+      <div class="depth-fill" id="depth-fill"></div>
+      <div class="depth-marker" id="depth-marker"></div>
+    </div>
+  </div>
+
+  <header class="top-hud">
+    <div class="hud-brand">Rift Rarity</div>
+    <div class="hud-depth">
+      <span class="hud-label">Depth</span>
+      <span id="hud-meters">0 m</span>
+    </div>
+    <div class="hud-round" id="hud-round">- / 5</div>
+  </header>
+
+  <main class="shell">
+    <section id="screen-start" class="panel active">
+      <p class="eyebrow">League pack</p>
+      <h1 class="brand">Begin dive</h1>
+      <p class="lede">
+        Rare valid answers sink you deeper. Wrong guesses keep the clock running;
+        keep trying until it matches or time runs out.
+      </p>
+      <button type="button" class="btn primary" id="btn-start" disabled>Loading pack…</button>
+      <ul class="rules">
+        <li>25 seconds per prompt</li>
+        <li>Misses don’t lock you out. Try again.</li>
+        <li>Tiers: Bronze → Challenger</li>
+      </ul>
+    </section>
+
+    <section id="screen-preview" class="panel" hidden>
+      <p class="eyebrow" id="preview-round">Prompt 1 / 5</p>
+      <p class="preview-kicker">Name one</p>
+      <h2 class="prompt xl" id="preview-text"></h2>
+      <div class="countdown-ring">
+        <span id="preview-count">3</span>
+      </div>
+      <p class="soft">Get ready…</p>
+    </section>
+
+    <section id="screen-play" class="panel" hidden>
+      <div class="timer-wrap" id="timer-wrap">
+        <svg class="timer-ring" viewBox="0 0 36 36" aria-hidden="true">
+          <circle class="timer-bg" cx="18" cy="18" r="16" />
+          <circle class="timer-fg" id="timer-fg" cx="18" cy="18" r="16" />
+        </svg>
+        <span class="timer-num" id="timer-num">25</span>
+      </div>
+      <p class="preview-kicker">Name one</p>
+      <h2 class="prompt" id="prompt-text"></h2>
+      <form id="answer-form" class="answer-form" autocomplete="off">
+        <label class="sr-only" for="answer-input">Your answer</label>
+        <input
+          id="answer-input"
+          name="answer"
+          type="text"
+          maxlength="40"
+          placeholder="Type your answer…"
+          required
+          autocomplete="off"
+          autocorrect="off"
+          spellcheck="false"
+        />
+        <p class="miss-feedback" id="miss-feedback" hidden>Not in the catalog. Keep trying.</p>
+        <button type="submit" class="btn primary">Submit</button>
+      </form>
+    </section>
+
+    <section id="screen-reveal" class="panel" hidden>
+      <p class="reveal-kicker" id="reveal-kicker">Accepted</p>
+      <h2 class="reveal-answer" id="reveal-answer"></h2>
+      <p class="tier" id="reveal-tier"></p>
+      <p class="points" id="reveal-points"></p>
+      <p class="depth-gain" id="reveal-depth"></p>
+      <p class="reveal-note" id="reveal-note"></p>
+      <button type="button" class="btn primary" id="btn-next">Keep diving</button>
+    </section>
+
+    <section id="screen-results" class="panel results-panel" hidden>
+      <p class="eyebrow" id="results-zone">Dive complete</p>
+      <h1 class="brand compact">Final depth</h1>
+      <p class="total" id="total-meters">0 m</p>
+      <p class="total-label" id="total-points">Sunlight zone</p>
+      <ul class="breakdown" id="breakdown"></ul>
+
+      <div class="share-block">
+        <p class="section-label">Share text</p>
+        <pre class="share-text" id="share-text" aria-label="Shareable dive summary"></pre>
+        <button type="button" class="btn primary" id="btn-share">Copy share text</button>
+        <p class="share-status" id="share-status" hidden></p>
+      </div>
+
+      <div class="catalog-block">
+        <p class="section-label">Answer catalogs</p>
+        <div id="answer-catalog"></div>
+      </div>
+
+      <button type="button" class="btn primary" id="btn-replay">Dive again</button>
+    </section>
+  </main>
+
+  <script src="game.js"></script>
+</body>
+</html>
