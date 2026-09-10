@@ -3,7 +3,29 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Rift Rarity - League Dive</title>
+  <title>Rift Rarity - League of Legends Rarity Dive Game</title>
+  <meta name="description" content="Play Rift Rarity: a Krillion-style League of Legends dive game. Answer prompts with rare valid picks to sink deeper. Bronze to Challenger scoring, timed rounds, shareable depth." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://rift-rarity.vercel.app/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Rift Rarity" />
+  <meta property="og:url" content="https://rift-rarity.vercel.app/" />
+  <meta property="og:title" content="Rift Rarity - League of Legends Rarity Dive Game" />
+  <meta property="og:description" content="Rare valid League answers sink you deeper. Timed prompts, Bronze to Challenger tiers, share your depth." />
+  <meta property="og:image" content="https://rift-rarity.vercel.app/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Rift Rarity - League of Legends Rarity Dive Game" />
+  <meta name="twitter:description" content="Rare valid League answers sink you deeper. Timed prompts, Bronze to Challenger tiers, share your depth." />
+  <meta name="twitter:image" content="https://rift-rarity.vercel.app/og-image.png" />
+
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="/favicon.png" type="image/png" sizes="32x32" />
+  <link rel="apple-touch-icon" href="/og-image.png" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet" />
@@ -42,10 +64,10 @@
   <main class="shell">
     <section id="screen-start" class="panel active">
       <p class="eyebrow">League pack</p>
-      <h1 class="brand">Begin dive</h1>
+      <h1 class="brand">Rift Rarity</h1>
       <p class="lede">
-        Rare valid answers sink you deeper. Wrong guesses keep the clock running;
-        keep trying until it matches or time runs out.
+        A League of Legends rarity dive game. Rare valid answers sink you deeper.
+        Wrong guesses keep the clock running; keep trying until it matches or time runs out.
       </p>
       <button type="button" class="btn primary" id="btn-start" disabled>Loading pack…</button>
       <ul class="rules">
@@ -125,6 +147,19 @@
       <button type="button" class="btn primary" id="btn-replay">Dive again</button>
     </section>
   </main>
+
+  <section class="seo-about" id="about">
+    <h2>About Rift Rarity</h2>
+    <p>
+      Rift Rarity is a free browser game inspired by rarity-dive trivia.
+      You get League of Legends prompts, a short timer on each one, and score by how rare your valid answer is.
+      Common picks stay near the surface. Obscure correct picks sink you toward Challenger depth.
+    </p>
+    <p>
+      Play for fun, share your depth without revealing answers, and try to beat your friends.
+      No install required. Works on desktop and mobile.
+    </p>
+  </section>
 
   <script src="game.js"></script>
 </body>
