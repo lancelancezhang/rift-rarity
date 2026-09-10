@@ -205,15 +205,16 @@ function setDepth(meters, { animate = true } = {}) {
     const prev = getComputedStyle(root).getPropertyValue("--sink-duration");
     root.style.setProperty("--sink-duration", "0ms");
     root.style.setProperty("--depth-pct", `${pct}%`);
+    root.style.setProperty("--depth-progress", String(pct / 100));
     void root.offsetWidth;
     root.style.setProperty("--sink-duration", prev.trim() || "1.4s");
   } else {
     root.style.setProperty("--depth-pct", `${pct}%`);
+    root.style.setProperty("--depth-progress", String(pct / 100));
   }
 
   $("hud-meters").textContent = `${Math.round(meters)} m`;
   document.body.dataset.zone = zoneForMeters(meters);
-  $("diver").style.top = `${28 + (pct / 100) * 18}%`;
 }
 
 function spawnBubbles() {
