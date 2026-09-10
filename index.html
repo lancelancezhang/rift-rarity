@@ -42,8 +42,31 @@
     </div>
     <div class="caustics"></div>
     <div class="bubbles" id="bubbles"></div>
-    <div class="diver" id="diver">
-      <div class="diver-body"></div>
+    <div class="diver" id="diver" aria-hidden="true">
+      <svg class="nautilus" viewBox="0 0 64 96" xmlns="http://www.w3.org/2000/svg">
+        <!-- Anchor -->
+        <g class="anchor" fill="none" stroke="#c9a45c" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M18 28v34" />
+          <path d="M12 34h12" />
+          <path d="M18 62c-8 0-12-6-12-6" />
+          <path d="M18 62c8 0 12-6 12-6" />
+          <circle cx="18" cy="28" r="3" fill="#c9a45c" stroke="none" />
+        </g>
+        <!-- Titan body -->
+        <ellipse cx="40" cy="58" rx="14" ry="20" fill="#1a4a5c" />
+        <ellipse cx="40" cy="58" rx="14" ry="20" fill="none" stroke="#2a6a7a" stroke-width="2" />
+        <!-- Helmet -->
+        <circle cx="40" cy="30" r="14" fill="#163d4c" />
+        <circle cx="40" cy="30" r="14" fill="none" stroke="#c9a45c" stroke-width="2.5" />
+        <circle cx="40" cy="30" r="8" fill="#0a2030" />
+        <circle cx="40" cy="30" r="8" fill="none" stroke="#3d8a9a" stroke-width="1.5" />
+        <circle cx="37" cy="27" r="2" fill="rgba(180,230,255,0.45)" />
+        <!-- Shoulder rivets -->
+        <circle cx="28" cy="44" r="2.2" fill="#c9a45c" />
+        <circle cx="52" cy="44" r="2.2" fill="#c9a45c" />
+        <!-- Arm to anchor -->
+        <path d="M28 50 Q22 48 18 40" fill="none" stroke="#1a4a5c" stroke-width="5" stroke-linecap="round" />
+      </svg>
       <div class="diver-trail"></div>
     </div>
     <div class="depth-rail">
@@ -63,18 +86,12 @@
 
   <main class="shell">
     <section id="screen-start" class="panel active">
-      <p class="eyebrow">League pack</p>
       <h1 class="brand">Rift Rarity</h1>
       <p class="lede">
-        A League of Legends rarity dive game. Rare valid answers sink you deeper.
-        Wrong guesses keep the clock running; keep trying until it matches or time runs out.
+        Rare League answers sink you deeper.
+        Misses keep the clock running. Race the depth.
       </p>
       <button type="button" class="btn primary" id="btn-start" disabled>Loading pack…</button>
-      <ul class="rules">
-        <li>25 seconds per prompt</li>
-        <li>Misses don’t lock you out. Try again.</li>
-        <li>Tiers: Bronze → Challenger</li>
-      </ul>
     </section>
 
     <section id="screen-preview" class="panel" hidden>
@@ -119,7 +136,6 @@
       <p class="reveal-kicker" id="reveal-kicker">Accepted</p>
       <h2 class="reveal-answer" id="reveal-answer"></h2>
       <p class="tier" id="reveal-tier"></p>
-      <p class="points" id="reveal-points"></p>
       <p class="depth-gain" id="reveal-depth"></p>
       <p class="reveal-note" id="reveal-note"></p>
       <button type="button" class="btn primary" id="btn-next">Keep diving</button>
@@ -152,8 +168,8 @@
     <h2>About Rift Rarity</h2>
     <p>
       Rift Rarity is a free browser game inspired by rarity-dive trivia.
-      You get League of Legends prompts, a short timer on each one, and score by how rare your valid answer is.
-      Common picks stay near the surface. Obscure correct picks sink you toward Challenger depth.
+      You get League of Legends prompts and a short timer on each one.
+      Common picks stay near the surface. Obscure correct picks sink you deeper.
     </p>
     <p>
       Play for fun, share your depth without revealing answers, and try to beat your friends.

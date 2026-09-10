@@ -345,7 +345,6 @@ function lockIn(result) {
 
   $("reveal-answer").textContent = result.display;
   $("reveal-tier").textContent = result.tierLabel;
-  $("reveal-points").textContent = result.points ? `+${result.points}` : "+0";
   $("reveal-depth").textContent = result.meters ? `↓ ${result.meters} m` : "↓ 0 m";
   $("reveal-note").textContent = result.note;
   $("btn-next").textContent =
@@ -525,8 +524,7 @@ function applyPackMeta() {
   MAX_METERS = maxTierPoints() * PROMPT_COUNT * METERS_PER_POINT;
 
   const eyebrow = document.querySelector("#screen-start .eyebrow");
-  if (eyebrow) eyebrow.textContent = "League pack";
-
+  if (eyebrow) eyebrow.remove();
   $("hud-round").textContent = `- / ${PROMPT_COUNT}`;
   $("btn-start").disabled = false;
   $("btn-start").textContent = "Begin dive";

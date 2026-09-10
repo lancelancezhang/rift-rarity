@@ -7,7 +7,7 @@
     "bronze": {
       "label": "Bronze",
       "points": 10,
-      "note": "The most common valid pick. Everyone lands here first."
+      "note": "A common pick. Barely leaves the surface."
     },
     "silver": {
       "label": "Silver",
@@ -37,7 +37,7 @@
     "challenger": {
       "label": "Challenger",
       "points": 100,
-      "note": "The rarest accepted tier. Almost nobody wrote this."
+      "note": "The rarest accepted depth. Almost nobody wrote this."
     }
   },
   "prompts": [
