@@ -1,52 +1,61 @@
 {
   "date": "2026-09-14",
-  "title": "Day 1 League pack",
+  "title": "Marksmen, yordles, Void, globals",
+  "sourceNotes": [
+    "Marksmen: https://wiki.leagueoflegends.com/en-us/Category:Marksman_champion",
+    "Yordles: https://wiki.leagueoflegends.com/en-us/Category:Yordle",
+    "Global champs: https://wiki.leagueoflegends.com/en-us/Category:Global_champion",
+    "Void champs cross-checked on champion pages / Void faction lore (Kai'Sa, Bel'Veth, Cho'Gath, Kha'Zix, Kog'Maw, Malzahar, Kassadin, Rek'Sai, Vel'Koz)",
+    "T1 / SKT players: esports roster history (not a wiki faction page)"
+  ],
   "prompts": [
     {
-      "id": "adc",
-      "text": "an ADC champion",
+      "id": "marksman",
+      "text": "a marksman champion",
       "answers": {
         "bronze": [
           "jinx",
           "ashe",
-          "caitlyn"
+          "caitlyn",
+          "ezreal"
         ],
         "silver": [
-          "ezreal",
           "lucian",
           "miss fortune",
-          "mf"
+          "mf",
+          "jhin",
+          "vayne"
         ],
         "gold": [
-          "vayne",
           "kaisa",
           "kai'sa",
-          "jhin"
-        ],
-        "platinum": [
           "draven",
           "tristana",
-          "twitch",
-          "sivir"
+          "twitch"
+        ],
+        "platinum": [
+          "sivir",
+          "varus",
+          "xayah",
+          "aphelios"
         ],
         "diamond": [
-          "aphelios",
-          "xayah",
-          "varus"
-        ],
-        "master": [
-          "kalista",
-          "nilah",
-          "corki",
-          "quinn"
-        ],
-        "challenger": [
           "samira",
           "zeri",
+          "kalista",
+          "senna"
+        ],
+        "master": [
           "smolder",
           "kogmaw",
           "kog'maw",
-          "senna"
+          "kindred",
+          "corki"
+        ],
+        "challenger": [
+          "yunara",
+          "akshan",
+          "teemo"
         ]
       }
     },
@@ -60,112 +69,124 @@
           "tristana"
         ],
         "silver": [
-          "corki",
+          "veigar",
+          "poppy",
           "heimerdinger",
           "heimer"
         ],
         "gold": [
-          "poppy",
-          "veigar"
+          "ziggs",
+          "corki",
+          "kennen"
         ],
         "platinum": [
-          "ziggs",
-          "rumble"
-        ],
-        "diamond": [
-          "kennen",
-          "gnar"
-        ],
-        "master": [
-          "kled",
+          "rumble",
+          "gnar",
           "fizz"
         ],
+        "diamond": [
+          "kled",
+          "vex"
+        ],
+        "master": [
+          "kobuko"
+        ],
         "challenger": [
-          "vex",
-          "yuumi"
+          "fizz"
         ]
       }
     },
     {
       "id": "t1",
-      "text": "T1 players",
+      "text": "a T1 player",
       "answers": {
         "bronze": [
           "faker"
         ],
         "silver": [
-          "zeus",
-          "oner",
+          "keria",
           "gumayusi",
           "guma",
-          "keria"
+          "oner",
+          "zeus"
         ],
         "gold": [
-          "doran"
-        ],
-        "platinum": [
+          "doran",
           "bang",
           "bengi",
-          "wolf",
-          "peanut"
+          "wolf"
+        ],
+        "platinum": [
+          "peanut",
+          "teddy",
+          "clid",
+          "cuzz"
         ],
         "diamond": [
           "blank",
           "duke",
           "easyhoon",
-          "teddy",
-          "clid"
+          "khan"
         ],
         "master": [
-          "cuzz",
-          "khan",
           "effort",
           "impact",
-          "piglet"
+          "piglet",
+          "huni"
         ],
         "challenger": [
           "untara",
           "thal",
           "marin",
           "sky",
-          "tom",
-          "huni"
+          "tom"
         ]
       }
     },
     {
-      "id": "ult",
-      "text": "a champion with a global ultimate",
+      "id": "global",
+      "text": "a Global champion",
       "answers": {
         "bronze": [
           "twisted fate",
           "twisted",
           "tf",
-          "shen"
+          "shen",
+          "karthus"
         ],
         "silver": [
           "nocturne",
           "gangplank",
-          "gp"
-        ],
-        "gold": [
-          "karthus",
-          "pantheon"
-        ],
-        "platinum": [
-          "ashe",
+          "gp",
+          "soraka",
           "jinx"
         ],
-        "diamond": [
+        "gold": [
+          "ezreal",
+          "ashe",
+          "senna",
           "draven"
         ],
+        "platinum": [
+          "zed",
+          "akali",
+          "yone",
+          "ekko"
+        ],
+        "diamond": [
+          "warwick",
+          "irelia",
+          "xayah",
+          "aphelios"
+        ],
         "master": [
-          "ezreal",
-          "senna"
+          "lillia",
+          "vex",
+          "briar",
+          "aurora"
         ],
         "challenger": [
-          "galio",
-          "soraka"
+          "mel"
         ]
       }
     },
@@ -181,28 +202,29 @@
         ],
         "silver": [
           "chogath",
-          "cho'gath"
+          "cho'gath",
+          "malzahar"
         ],
         "gold": [
           "reksai",
           "rek'sai",
-          "rek"
+          "rek",
+          "kassadin"
         ],
         "platinum": [
           "velkoz",
-          "vel'koz",
-          "malzahar"
+          "vel'koz"
         ],
         "diamond": [
-          "kassadin"
-        ],
-        "master": [
           "kogmaw",
           "kog'maw"
         ],
-        "challenger": [
+        "master": [
           "belveth",
           "bel'veth"
+        ],
+        "challenger": [
+          "malz"
         ]
       }
     }
